@@ -47,16 +47,17 @@ def find_anagrams(mixedletters, word_list):
         for letter in word.word:
             
             if letter == 'j' or letter == 'k'or letter == 'x'or letter == 'z':
-                word.point += 3
+                point += 3
             elif letter == 'q' or letter == 'c'or letter == 'f' or letter == 'h' or letter == 'l' or letter == 'm' or letter == 'p' or letter == 'v' or letter == 'w' or letter == 'y':
-                word.point += 2
+                point += 2
             else:
-                word.point += 1
+                point += 1
             
             
        # if point > toppoint:
         #    toppoint = point
-           
+        point = (point+1)**2
+        word.point = point   
         point = 0
         
     
